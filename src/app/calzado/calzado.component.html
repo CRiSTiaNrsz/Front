@@ -26,41 +26,68 @@
     </div>
 </div>
 
+<table>
+    <tr>
+        <td>Categoria
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div *ngFor="let calzado of calzados">{{calzado.categoria.nombre}}
+                                <div *ngIf="calzado.categoria.nombre==null">---</div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
 
+        <td>Descripcion
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div *ngFor="let calzado of calzados">{{calzado.descripcion}}</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
 
-<table mat-table class="mat-elevation-z8">
+        <td>Marca
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div *ngFor="let calzado of calzados">{{calzado.marca}}</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
+        <td>Precio
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div *ngFor="let calzado of calzados">{{calzado.precio}}</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
 
-    <!-- Position Column -->
-
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="categoria">
-        <th mat-header-cell> Categoria </th>
-        <td mat-cell *matCellDef="let element"> {{calzado[0].marca}} </td>
-    </ng-container>
-
-    <!-- Weight Column -->
-    <ng-container matColumnDef="descripcion">
-        <th mat-header-cell> Descripcion </th>
-        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-    </ng-container>
-
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="marca">
-        <th mat-header-cell> Marca </th>
-        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-    </ng-container>
-    <ng-container matColumnDef="precio">
-        <th mat-header-cell> Precio </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-    <ng-container matColumnDef="stock">
-        <th mat-header-cell> Stock </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-
-
+        <td>Stock
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div *ngFor="let calzado of calzados">{{calzado.stock}}</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
 </table>
